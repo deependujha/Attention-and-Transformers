@@ -41,7 +41,7 @@ sentence 2: Apple just launched a new iPhone.
 > We will multiply the embeddings with some weights based on the context of the sentence.
 >
 > For example, Let's say we have a sentence "Apple is a fruit." and "Apple launched a new phone".
-> - In first sentence, $$ e_{apple} = 0.7 * e_{apple} + 0.05 * e_{is} + 0.15 e_{a} + 0.1 * e_{fruit} $$
+> - In first sentence, $$e_{apple} = 0.7 * e_{apple} + 0.05 * e_{is} + 0.15 e_{a} + 0.1 * e_{fruit}$$
 > 
 > Now, the embedding of "Apple" will be more inclined towards fruit. (since, context is now taken into consideration)
 > 

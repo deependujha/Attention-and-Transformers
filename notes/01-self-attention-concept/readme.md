@@ -23,7 +23,7 @@ sentence 2: Apple just launched a new iPhone.
 
 ## What is Self-Attention?
 
-![self attention campusx](../assets/self-attention-campusx.png)
+![self attention campusx](../../assets/self-attention-campusx.png)
 
 - We pass in `normal embeddings` of words into **self-attention** and it gives us `contextual embeddings` of words.
 
@@ -62,7 +62,7 @@ sentence 2: Apple just launched a new iPhone.
 > ```
 > - We're doing **softmax** to make sure the weights sum to 1.
 
-![basic intuition of self attention](../assets/basic-intuition-attention.png)
+![basic intuition of self attention](../../assets/basic-intuition-attention.png)
 
 - What we get at the end is **contextual embeddings** of the words.
 
@@ -71,12 +71,12 @@ sentence 2: Apple just launched a new iPhone.
 - `Pro`: All the contextual embeddings are calculated in parallel. So, it's very fast.
   - Matrix multiplication can be done on GPUs and the contextual embeddings can be calculated very fast.
 
-![faster contextual embedding](../assets/faster-contextual-embedding.png)
+![faster contextual embedding](../../assets/faster-contextual-embedding.png)
 
 - `Con`: There're no **learnable parameters**. So, it's not learning anything. It's just calculating the weights based on similarity.
   - It will only calculate **general contextual embedding**. It won't be able to learn anything specific to the task. (like, `piece of cake`, it will think of cake and not the idiom.)
 
-![problem with general contextual embedding](../assets/general-contextual-embedding.png)
+![problem with general contextual embedding](../../assets/general-contextual-embedding.png)
 
 - `Con`: It's **not capturing the sequence information**.
 
@@ -84,12 +84,12 @@ sentence 2: Apple just launched a new iPhone.
 
 ## Let's introduce Learnable Parameters 🧠
 
-![learnable parameter](../assets/learnable-parameter.png)
+![learnable parameter](../../assets/learnable-parameter.png)
 
 - One issue we can clearly see is, same embedding of a word is used in all the sentences. (irrespective of context)
 - So, we can introduce some learnable parameters to modify the embeddings based on the context.
 
-![Query key value](../assets/query-key-value.png)
+![Query key value](../../assets/query-key-value.png)
 
 ---
 
@@ -106,7 +106,7 @@ sentence 2: Apple just launched a new iPhone.
 
 ## Overall idea:
 
-![overall idea](../assets/overall-idea.png)
+![overall idea](../../assets/overall-idea.png)
 
 - We have original embeddings of the words.
 - We pass them through 3 different neural networks to get `Query`, `Key` and `Value` for each word.

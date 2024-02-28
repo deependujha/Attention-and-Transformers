@@ -1,6 +1,6 @@
 # Multiple Attention Heads 🧘🏻🧘🏻‍♀️
 
-![multi head attention](../assets/multi-head-attention.png)
+![multi head attention](../../assets/multi-head-attention.png)
 
 - In the Transformer, the Attention module repeats its computations multiple times in parallel. 
 - Each of these is called an `Attention Head`. 

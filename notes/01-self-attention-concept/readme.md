@@ -117,3 +117,22 @@ sentence 2: Apple just launched a new iPhone.
 <br/>
 
 - **All these steps are done in parallel. So, it's very fast.**
+
+---
+
+## Attention
+
+![attention](https://github.com/user-attachments/assets/36e1fd69-364a-4f2e-904a-0a4988ab0ed8)
+
+- $k^T$ means `transpose of K`.
+- $d_K$ means `embedding dimension of K`. In most cases: embedding dimensions of Q, K, V will be same.
+
+> It's required for Q & K embedding dimension to be same, but for V it can be different.
+>
+> Let's say we have 6 tokens, and 512 embedding dimension.
+> 
+> So, for matrix multiplication to take place, (Q & transpose of K), will result in [(6,512) , (512,6)] => (6,6)
+> 
+> Now, for matrix multiplication with V: [(6,6) (6,512)] => (6,512) self-attention embedding
+> 
+> We can clearly see, V embedding dimension has no constraints.
